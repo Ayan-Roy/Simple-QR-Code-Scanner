@@ -30,8 +30,6 @@ public class MainActivity extends AppCompatActivity {
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-
-                        Log.e(TAG, "Result --- "+result.getText());
                         Toast.makeText(MainActivity.this, result.getText(), Toast.LENGTH_LONG).show();
                     }
                 });
