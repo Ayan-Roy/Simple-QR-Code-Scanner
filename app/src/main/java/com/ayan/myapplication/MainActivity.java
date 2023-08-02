@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
@@ -15,6 +16,7 @@ import com.google.zxing.Result;
 
 public class MainActivity extends AppCompatActivity {
     private CodeScanner mCodeScanner;
+    private String TAG = "MainActivity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,7 +30,9 @@ public class MainActivity extends AppCompatActivity {
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-                        Toast.makeText(MainActivity.this, result.getText(), Toast.LENGTH_SHORT).show();
+
+                        Log.e(TAG, "Result --- "+result.getText());
+                        Toast.makeText(MainActivity.this, result.getText(), Toast.LENGTH_LONG).show();
                     }
                 });
             }
