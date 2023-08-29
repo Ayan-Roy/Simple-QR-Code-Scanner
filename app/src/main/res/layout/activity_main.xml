@@ -1,18 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
-<!--    <com.budiyev.android.codescanner.CodeScannerView
-        android:id="@+id/scanner_view"
+    <!--    <com.budiyev.android.codescanner.CodeScannerView
+            android:id="@+id/scanner_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>-->
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>-->
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
 
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnOpenCamera"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:text="Open Camera"
+            app:cornerRadius="7dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnOpenGallery"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:text="Open Gallery"
+            app:cornerRadius="7dp" />
+
+    </LinearLayout>
 
     <ImageView
+        android:id="@+id/imageview"
         android:layout_width="match_parent"
-        android:layout_height="500dp"
-        android:layout_gravity="center"
-        android:id="@+id/qrImage"/>
-</FrameLayout>
+        android:layout_height="400dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnScanGallery"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="Scan"
+        app:cornerRadius="7dp" />
+
+    <TextView
+        android:id="@+id/tvResultText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="gfjhsjfh"
+        android:textSize="14sp"/>
+</LinearLayout>
